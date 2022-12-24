@@ -24,12 +24,25 @@
         </div>
         <h5>
             <span class="badge badge-primary">
-                <i class="fa fa-large fa-fw"></i>
-                {{ $transaction->kategori }}
+                <i class="fa fa-star fa-fw"></i>
+                <em>{{ $transaction->kategori }}</em>
             </span>
         </h5>
-        <hr>
-        <p class="lead">{{ $transaction->kota }}</p>
-        <p class="lead">{{ $transaction->negara }}</p>
+        <p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <i class="fa fa-th-large fa-fw"></i>
+                    <em>{{ $transaction->nominal }}</em>
+                </li>
+                <li class="list-inline-item">
+                    <i class="fa fa-large fa-fw"></i>
+                    {{ $transaction->tujuan }}
+                </li>
+                <li class="list-inline-item">
+                    <i class="fa fa-large fa-fw"></i>
+                    {{ $transaction->account->id }}
+                </li>
+            </ul>
+            </p>
     </div>
 @endsection

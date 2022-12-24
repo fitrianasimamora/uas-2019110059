@@ -12,10 +12,9 @@ class Transaction extends Model
     protected $guarded = [];
 
     protected $fillable = ['kategori', 'nominal', 'tujuan',  'accound_id'];
-    public $timestamps = true;
 
     public function author()
     {
-        return $this->belongsTo('App\Models\Account', 'transaction_id');
+        return $this->belongsTo('App\Models\Account');
     }
 }

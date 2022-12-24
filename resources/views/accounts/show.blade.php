@@ -24,12 +24,23 @@
         </div>
         <h5>
             <span class="badge badge-primary">
-                <i class="fa fa-large fa-fw"></i>
-                {{ $account->id }}
+                <i class="fa fa-star fa-fw"></i>
+                <em>ID : {{ $account->id }}</em>
             </span>
         </h5>
-        <hr>
-        <p class="lead">{{ $account->nama }}</p>
-        <p class="lead">{{ $account->jenis }}</p>
+        <p>
+            <div>
+        <ul class="list-inline">
+            <li class="list-inline-item">
+                <i class="fa fa-th-large fa-fw"></i>
+                <em> {{ $account->nama }}</em>
+            </li>
+        </div>
+            <li class="list-inline-item">
+                <i class="fa fa-calendar fa-fw"></i>
+                 {{ $account->jenis }}
+            </li>
+        </ul>
+        </p>
     </div>
 @endsection
